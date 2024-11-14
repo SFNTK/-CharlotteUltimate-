@@ -1,0 +1,32 @@
+#moveimg{
+    width: 20%;
+    height: auto;
+    margin-left: 90%;
+   
+}
+.contenttime{
+    display: flex;
+    flex-direction: column;
+    font-family: "DM Sans", sans-serif;
+
+    align-items: flex-end;
+
+}
+.contenttime p{
+ 
+
+}
+.pcardtime{
+ 
+  
+ 
+    font-weight: bold;
+    font-size: 1.2rem;
+    background: linear-gradient(104deg, rgba(51, 150, 255, 1) 15%, rgba(0, 122, 255, 1) 42%, rgba(0, 79, 186, 1) 100%);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text;
+    color: transparent;
+
+
+margin-left: 5px;  
+}

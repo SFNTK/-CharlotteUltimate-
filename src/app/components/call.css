@@ -1,0 +1,38 @@
+#call{
+    height: 40vh;
+    padding: 0 5%;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(../../../public/residential.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#call p{
+    font-family: "DM Sans", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-self: center;
+    margin-top: calc(20vh - 100px);
+}
+#call img{
+  
+    width: auto;
+    margin-top: 2vh;
+    height: 100px;
+  
+}
+@media (max-width:1023px){
+    #call{
+        justify-content: center;
+    }
+    #call p{
+        margin-top: 0;
+    }
+}

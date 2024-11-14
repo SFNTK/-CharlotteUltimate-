@@ -1,0 +1,47 @@
+#home{
+    background-image: url("../../../public/hero.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "DM Sans", sans-serif;
+}
+#sparkles{
+  /*  position: absolute;
+    top: 50%;
+    bottom: 50%;
+    right: 10%;
+    width: 40px;
+    height: 40px;*/
+  
+
+  
+}
+#home h1{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    padding: 10px 0;
+ 
+}
+#home p{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   
+}
+
+   
+#cleaninghero{
+    position: absolute;
+    width: 100px;
+    top: 5%;
+    left: 3%;
+}
+.phro{
+    font-size: 1.2rem;
+}
+.herobtn{
+    width: 300px;
+    padding:  10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
+}
