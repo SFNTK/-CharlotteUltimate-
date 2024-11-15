@@ -17,15 +17,15 @@ const Nav = () => {
       setMenuicon(<X  className=" iconmenu w-6 h-6" onClick={() => {
         setIsMenuOpen(false)
       
-        refmenu.current.style.transform = "translateX(0px)";
+        refmenu.current.style.transform = "translateX(1000px)";
       }} />)
-      refmenu.current.style.transform="translateX(1000px)"
+      refmenu.current.style.transform="translateX(0px)"
     }else{
       setMenuicon(<Menu   onClick={()=>{
           setIsMenuOpen(true)
         }}  className={`h-6 w-6 iconmenu transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
       )
-      refmenu.current.style.transform="translateX(0px)"
+      refmenu.current.style.transform="translateX(1000px)"
     }
   }, [isMenuOpen])
   return (
