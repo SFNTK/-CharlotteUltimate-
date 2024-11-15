@@ -16,9 +16,10 @@ const Nav = () => {
     if (isMenuOpen) {
       setMenuicon(<X  className=" iconmenu w-6 h-6" onClick={() => {
         setIsMenuOpen(false)
-        refmenu.current.style.transform = "scaleY(0)";
+      
+        refmenu.current.style.transform = "translateX(1000px)";
       }} />)
-      refmenu.current.style.transform="scaleY(1)"
+      refmenu.current.style.transform="translateX(0px)"
     }else{
       setMenuicon(<Menu   onClick={()=>{
           setIsMenuOpen(true)
