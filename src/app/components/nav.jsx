@@ -25,7 +25,7 @@ const Nav = () => {
           setIsMenuOpen(true)
         }}  className={`h-6 w-6 iconmenu transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
       )
-      refmenu.current.style.transform="scaleY(0)"
+      refmenu.current.style.transform="translateX(0px)"
     }
   }, [isMenuOpen])
   return (
