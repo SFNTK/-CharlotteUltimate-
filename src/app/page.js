@@ -22,7 +22,7 @@ import Timeline2 from './components/timeline2'
 
 export default function Home() {
  
-
+const footertxt=" Charlotte's Ultimate Cleaning Service, LLC. All rights reserved."
 
 
   return (
@@ -120,7 +120,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-primary-foreground/10 text-center">
-            <p>&copy; {new Date().getFullYear()} | Designed By Soufiane Taki | Charlotte's Ultimate Cleaning Service, LLC. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} | Designed By Soufiane Taki |{footertxt}</p>
           </div>
         </div>
       </footer>
