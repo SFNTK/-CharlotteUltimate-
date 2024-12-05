@@ -58,7 +58,7 @@ align-items: center;
     }
     #navphoneinside{
         row-gap: 2vh;
-        position:fixed;
+       
     }
     #closenav{
         position: absolute;
