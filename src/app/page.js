@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { ChevronDown, Star, Phone, Mail, Clock, Facebook, Instagram, Sparkles, Building, Truck, Briefcase, PlusCircle, Zap } from 'lucide-react'
+import {  Star, Phone, Mail, Clock, Facebook, Instagram, Sparkles, Building, Truck, Briefcase, PlusCircle, Zap } from 'lucide-react'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -20,13 +20,63 @@ import Calltoacton from './components/calltoacton'
 import Faq from './components/faq'
 import Timeline2 from './components/timeline2'
 
+
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation'
+
+
 export default function Home() {
- 
+ const footerdata="Charlotte's Ultimate Cleaning Service, LLC. All rights reserved.";
+ const router = useRouter()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [MenuOMenuiconpen, setMenuicon] = useState(false)
+  const refmenu = useRef()
+  useEffect(() => {
+    if (isMenuOpen) {
+      setMenuicon(<X  className=" iconmenu w-6 h-6" onClick={() => {
+        setIsMenuOpen(false)
+      
+        refmenu.current.style.transform = "translateX(1000px)";
+      }} />)
+      refmenu.current.style.transform="translateX(0px)"
+    }else{
+      setMenuicon(<Menu   onClick={()=>{
+          setIsMenuOpen(true)
+        }}  className={`h-6 w-6 iconmenu transition-transform ${isMenuOpen ? 'rotate-180' : ''}`} />
+      )
+      refmenu.current.style.transform="translateX(1000px)"
+    }
+  }, [isMenuOpen])
 
 
 
   return (
     <div className="min-h-screen bg-background font-sans">
+    <div id="navphone"
+
+        ref={refmenu}
+
+      >
+       
+        <nav className="container navphoneinside py-4 flex flex-col w-full items-center space-y-2">
+          <a href="#home" className="text-sm font-medium hover:underline bg-darkblue w-full py-2 text-center"
+            onClick={() => {
+setIsMenuOpen(false)            }}>Home</a>
+          <a href="#about" className="text-sm font-medium hover:underline bg-darkblue w-full py-2 text-center" onClick={() => {
+        setIsMenuOpen(false)  
+          }}>About</a>
+          <a onClick={() => {
+       setIsMenuOpen(false)  
+          }} href="#services" className="text-sm font-medium hover:underline bg-darkblue w-full py-2 text-center">Services</a>
+          <a onClick={() => {
+           setIsMenuOpen(false)  
+          }} href="#testimonials" className="text-sm font-medium hover:underline bg-darkblue w-full py-2 text-center">Testimonials</a>
+          <a onClick={() => {
+           setIsMenuOpen(false)  
+          }} href="#contact" className="text-sm font-medium hover:bg-semidark bg-darkblue w-full py-2 text-center" >Contact</a>
+        </nav>
+      </div>
     <Banda/>
 <Nav/>
       
@@ -120,7 +170,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-primary-foreground/10 text-center">
-            <p>&copy; {new Date().getFullYear()} | Designed By Soufiane Taki | Charlotte's Ultimate Cleaning Service, LLC. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} | Designed By Soufiane Taki | {footerdata}</p>
           </div>
         </div>
       </footer>

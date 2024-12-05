@@ -26,10 +26,11 @@
 
 }
 #navphone{
-    transform: scaleY(0);
+  
     display: none;
     transition:  transform 1s;
-    transform-origin: right;
+   transform: translateX(1000px);
+     
 }
 .iconmenu{
     display: none;
@@ -57,6 +58,7 @@ align-items: center;
     }
     #navphoneinside{
         row-gap: 2vh;
+       
     }
     #closenav{
         position: absolute;
