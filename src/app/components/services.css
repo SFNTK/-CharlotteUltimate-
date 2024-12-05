@@ -4,6 +4,7 @@
     justify-content: space-around;
     padding-top: 30px;
     position: relative;
+    overflow-x: hidden;
 
 }
 
